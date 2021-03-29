@@ -1,0 +1,15 @@
+---
+# tasks file for webserver
+- name: installing httpd and php  softwares
+  package: 
+    name: "{{ item }}"
+    state: present
+  loop: "{{ softwares }}"
+- name: copying web page
+  copy: 
+    dest: "/var/www/html"
+    src: "/root/index.php"
+- name: starting the services
+  service:
+     name: httpd
+     state: started 
