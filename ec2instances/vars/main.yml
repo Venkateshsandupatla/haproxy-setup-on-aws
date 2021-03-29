@@ -1,0 +1,10 @@
+---
+# vars file for ec2instances
+key_name: "ansible"
+instance_type: "t2.micro"
+ami_id: "ami-04b1ddd35fd71475a"
+count: 3
+subnet_id: "subnet-573a333f"
+region: "ap-south-1"
+sg_id: "sg-03fc89777ba5fb3ee"
+
